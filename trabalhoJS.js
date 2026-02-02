@@ -45,4 +45,10 @@ function listarIndisponiveis(inventario) {
 
 function listarPrecosIva(inventario) {
     return inventario.map(produto => produto.preco * 1.23);
-}
+};
+
+//funcao calcular total do inventario
+
+function calcularTotalInventario(inventario){
+    return inventario.reduce((total, produto) => total + produto.preco, 0)
+};
