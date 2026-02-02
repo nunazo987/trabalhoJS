@@ -1,5 +1,6 @@
 //trabalho JavaScript aula
 
+//part 1
 const inventario = [
     {id: 1, nome: "Teclado Mecânico RGB", preco: 85, 
         categoria: ["Informática", "Periféricos"], emStock: true},
@@ -19,7 +20,16 @@ const inventario = [
         categoria: ["Informática", "Periféricos"], emStock: true},
 ];
 
+//funcao para achar produto em stock
 function listarStock(){
     return inventario.filter(produto => produto.emStock == true)
-}
+};
+
 const stockDisponivel = listarStock(inventario);
+
+//funcao para achar produto em stock e abaixo de 100
+function listarStock100(){
+    return inventario.filter(produto => produto.emStock == true && produto.preco < 100)
+};
+
+const stockDisponivel100 = listarStock100(inventario);
