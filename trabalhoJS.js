@@ -33,3 +33,10 @@ function listarStock100(){
 };
 
 const stockDisponivel100 = listarStock100(inventario);
+
+//funcao para achar se ha algum artigo sem stock
+
+function listarIndisponiveis(inventario) {
+    const semStock = inventario.filter(produto => produto.emStock === false);
+    return semStock;
+}
