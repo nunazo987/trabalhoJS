@@ -40,3 +40,9 @@ function listarIndisponiveis(inventario) {
     const semStock = inventario.filter(produto => produto.emStock === false);
     return semStock;
 }
+
+//calcular precos com IVA
+
+function listarPrecosIva(inventario) {
+    return inventario.map(produto => produto.preco * 1.23);
+}
